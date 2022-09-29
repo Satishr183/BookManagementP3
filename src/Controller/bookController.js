@@ -29,7 +29,7 @@ const awsFileUploader = async function(req, res){
              Key: "abc/" + file.originalname, //HERE 
              Body: file.buffer
          }
-     
+     console.log(file)
      
          s3.upload( uploadParams, function (err, data ){
              if(err) {
